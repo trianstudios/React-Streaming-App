@@ -1,38 +1,364 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.lineicons.com/2.0/LineIcons.css');
+
+:root {
+  --padding: 30px;
+  --accent-color: #8bc34a;
+  --accent-text-color: #fff;
+  --color-text: #2a2b30;
+  --muted-text-color: rgba(0,0,0,0.55);
+  --color-background: #f3f3f37d;
+  --left-container-width: 380px;
+  --primary-button-color: var(--color-text);
+  --right-container-width: calc(100% - var(--left-container-width));
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  user-select: none !important;
+  user-modify: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  -webkit-user-select: none !important;
+
+  transition: all 0.3s ease-in-out;
+}
+
+img {
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+}
+
+.app{
+  background-color: var(--color-background);
+  display: flex;
+  width: 100%;
+}
+
+.left__container{
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  width: var(--left-container-width);
+  box-shadow: 1px 0px 4px -2px rgba(0, 0, 0, 0.15);
+  z-index: 99999;
+  display: inline-grid;
+  align-items: end;
+  justify-content: center;
+}
+
+.right__container{
+  margin-left: var(--left-container-width);
+  width: var(--right-container-width);
+  padding-bottom: 40px;
+}
+
+.hidden{
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.no-padding{
+  padding: 0 !important;
+}
+
+.no-margin{
+  margin: 0 !important;
+}
+
+.font-thin{
+  font-weight: 100;
+}
+
+.font-light{
+  font-weight: 300;
+}
+
+.font-normal{
+  font-weight: 400;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-black{
+  font-weight: 900;
+}
+
+.m-b-5{
+  margin-bottom: 5px;
+}
+
+.m-b-10{
+  margin-bottom: 10px;
+}
+
+.m-b-15{
+  margin-bottom: 15px;
+}
+
+.m-b-20{
+  margin-bottom: 20px;
+}
+
+.m-t-5{
+  margin-top: 5px;
+}
+
+.m-t-10{
+  margin-top: 10px;
+}
+
+.m-t-15{
+  margin-top: 15px;
+}
+
+.m-t-20{
+  margin-top: 20px;
+}
+
+.m-l-5{
+  margin-left: 5px;
+}
+
+.m-l-10{
+  margin-left: 10px;
+}
+
+.m-l-15{
+  margin-left: 15px;
+}
+
+.m-l-20{
+  margin-left: 20px;
+}
+
+.m-r-5{
+  margin-right: 5px;
+}
+
+.m-r-10{
+  margin-right: 10px;
+}
+
+.m-r-15{
+  margin-right: 15px;
+}
+
+.m-r-20{
+  margin-right: 20px;
+}
+
+.button{
+  cursor: pointer;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+  background-color: #e6e6e6;
+  width: 120px;
+  height: 35px;
+}
+
+.circle-button{
+  cursor: pointer;
+  color: black;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 2px;
+  margin-right: 0.5rem;
+  background-color: #e6e6e6;
+  width: 35px;
+  height: 35px;
+}
+
+.button:hover{
+  color: var(--accent-text-color);
+  background-color: var(--accent-color);
+  transition: all 0.3s;
+}
+
+.black__button{
+  background-color: var(--primary-button-color);
+  color: var(--accent-text-color);
+}
+
+.black__button:hover{
+  box-shadow: 0px 0px 2px 0px #0000003d;
+  color: var(--accent-text-color);
+  background-color: var(--accent-color);
+  transition: all 0.3s;
+}
+
+.capsule-outline{
+  border-radius: 50px;
+}
+
+.circle-outline{
+  border-radius: 50px;
+}
+
+.lni {
+   display: inline;
+  font: normal normal normal 1em/1 'LineIcons';
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.logo{
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.nav__icon{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav__title{
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #2a2b30;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav__tagline{
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #2a2b30bd;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.divider{
+  margin: 25px 130px;
+  opacity: 0.3;
+}
+
+.divider-50{
+  margin: 25px 150px;
+  opacity: 0.13;
+}
+
+
+.nav__links{
+  list-style: none;
+  display: block;
+}
+
+.nav__links li{
+  padding: 10px 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: padding 0.3s ease-in-out;
+}
+
+.nav__links li:hover a{
+  padding-left: 40px;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.nav__links li a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2a2b30;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon{
+  font-size: 1.1rem;
+}
+
+.nav__links__social{
+  list-style: none;
+  display: inline-flex;
   align-items: center;
+  height: 50px;
+  width: 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav__links__social li{
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: padding 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav__links__social li{
+  margin: 0 15px
 }
+
+.nav__links__social li:last-child{
+  margin-right: 0;
+}
+
+.nav__links__social li:first-child{
+  margin-left: 0;
+}
+
+.nav__links__social li:hover a{
+  color: #2a2b30;
+  cursor: pointer;
+  background: var(--accent-color);
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.nav__links__social li:hover a i{
+  transform: translateY(0px);
+}
+
+.nav__links__social li a{
+  display: flex;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2a2b30;
+}
+
+.footer{
+  padding: 30px;
+  text-align: center;
+}
+
+.footer p{
+  font-size: 0.8rem;
+}
+
+.footer p a{
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2a2b30;
+  letter-spacing: 0.05em;
+}
+
+.footer p a:hover{
+  color: var(--accent-color);
+}
+

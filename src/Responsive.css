@@ -1,0 +1,101 @@
+@media screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
+    .left__container{
+        display: none !important;
+        width: 0 !important;
+    }
+    .right__container{
+        width: 100% !important;
+        margin-left: 0  !important;
+    }
+
+    .banner{
+        height: 450px !important;
+    }
+
+    .banner__contents{
+        bottom: 60px !important;
+        margin: 0 40px !important;
+        width: calc(100% - 80px) !important;
+    }
+
+    .banner__title {
+        font-size: 2rem !important;
+        text-align: center !important;
+        margin-bottom: 40px;
+    }
+
+    .banner_buttons{
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner__description{
+        max-width: 100% !important;
+        text-align: center !important;
+        font-size: 0.75rem !important;
+    }
+
+    .row_poster_large {
+        max-height: 300px;
+        margin-right: 10px;
+    }
+
+    .banner_button{
+        font-size: 0.7rem !important;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .banner__contents {
+        bottom: 100px !important;
+        margin: 0 120px !important;
+        width: calc(100% - 240px) !important;
+    }
+    .banner__description{
+        height: 100% !important;
+    }
+
+    .banner__title{
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (min-width: 769px) {
+    .banner{
+        height: 500px !important;
+    }
+    .banner__title{
+        font-size: 2.25rem !important;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+    .navigation_bar{
+        display: none !important;
+    }
+    .left__container{
+        width: 300px !important;
+    }
+    .right__container{
+        margin-left: 300px !important;
+        width: calc(100% - 300px) !important;
+    }
+}
+
+@media screen and (min-width: 1025px) and (orientation: portrait) {
+    .banner{
+        height: 500px !important;
+    }
+    .left__container{
+        width: 380px !important;
+    }
+    .right__container{
+        margin-left: 380px !important;
+        width: calc(100% - 380px) !important;
+    }
+    .navigation_bar{
+        display: none !important;
+    }
+}
